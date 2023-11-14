@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SnapKit
 
 class InputCell: UITableViewCell {
     
@@ -30,7 +31,7 @@ class InputCell: UITableViewCell {
     
     private func configureTextField() {
         // Задайте здесь необходимые вам констрейнты для текстового поля
-        textField.snp_makeConstraints { make in
+        textField.snp.makeConstraints { make in
             make.edges.equalTo(self)
         }
     }

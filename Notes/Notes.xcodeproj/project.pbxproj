@@ -7,21 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2BAB7AD32AF3C8A9005EAB63 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAB7AD22AF3C8A9005EAB63 /* AppDelegate.swift */; };
+		2B4A442F2B0366360083F2DF /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2B4A442E2B0366360083F2DF /* SnapKit */; };
 		2BAB7AD72AF3C8A9005EAB63 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAB7AD62AF3C8A9005EAB63 /* ViewController.swift */; };
 		2BAB7ADC2AF3C8AB005EAB63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BAB7ADB2AF3C8AB005EAB63 /* Assets.xcassets */; };
 		2BAB7ADF2AF3C8AB005EAB63 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BAB7ADD2AF3C8AB005EAB63 /* LaunchScreen.storyboard */; };
-		2BAB7AF72AF515BF005EAB63 /* SnapKit in Resources */ = {isa = PBXBuildFile; fileRef = 2BAB7AF62AF515BF005EAB63 /* SnapKit */; };
-		2BAB7AFB2AF5174B005EAB63 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2BAB7AFA2AF5174B005EAB63 /* SnapKit */; };
-		2BAB7B032AF7FC9A005EAB63 /* InputCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAB7B022AF7FC9A005EAB63 /* InputCell.swift */; };
-		2BAB7B052AF803CD005EAB63 /* inputValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAB7B042AF803CD005EAB63 /* inputValidation.swift */; };
 		2BD194032B0345620080AEBE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD194022B0345620080AEBE /* AppDelegate.swift */; };
 		2BD194052B034E930080AEBE /* InputCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD194042B034E920080AEBE /* InputCell.swift */; };
 		2BD194072B034EB10080AEBE /* inputValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD194062B034EB10080AEBE /* inputValidation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		2BAB7AF52AF51306005EAB63 /* Embed Frameworks */ = {
+		2B4A44202B035C420083F2DF /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
@@ -34,16 +30,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		2BAB7AD22AF3C8A9005EAB63 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2B4A442D2B03660C0083F2DF /* SnapKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = SnapKit; path = Notes/Carthage/Checkouts/SnapKit; sourceTree = "<group>"; };
 		2BAB7AD62AF3C8A9005EAB63 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2BAB7ADB2AF3C8AB005EAB63 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2BAB7ADE2AF3C8AB005EAB63 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2BAB7AE02AF3C8AB005EAB63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2BAB7AEB2AF4F14C005EAB63 /* Carthage */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Carthage; path = Notes/Carthage; sourceTree = "<group>"; };
-		2BAB7AF62AF515BF005EAB63 /* SnapKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = SnapKit; sourceTree = "<group>"; };
 		2BAB7AFF2AF517F7005EAB63 /* Notes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Notes.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		2BAB7B022AF7FC9A005EAB63 /* InputCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputCell.swift; sourceTree = "<group>"; };
-		2BAB7B042AF803CD005EAB63 /* inputValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = inputValidation.swift; sourceTree = "<group>"; };
 		2BD194022B0345620080AEBE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2BD194042B034E920080AEBE /* InputCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputCell.swift; sourceTree = "<group>"; };
 		2BD194062B034EB10080AEBE /* inputValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = inputValidation.swift; sourceTree = "<group>"; };
@@ -54,33 +46,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2BAB7AFB2AF5174B005EAB63 /* SnapKit in Frameworks */,
+				2B4A442F2B0366360083F2DF /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2B4A44232B035F1E0083F2DF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2B4A442D2B03660C0083F2DF /* SnapKit */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		2BAB7AC62AF3C8A8005EAB63 = {
 			isa = PBXGroup;
 			children = (
 				2BAB7AEA2AF4F14C005EAB63 /* Packages */,
 				2BAB7AD12AF3C8A9005EAB63 /* Notes */,
-				2BAB7AF92AF5174B005EAB63 /* Frameworks */,
 				2BAB7AFF2AF517F7005EAB63 /* Notes.app */,
+				2B4A44232B035F1E0083F2DF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		2BAB7AD12AF3C8A9005EAB63 /* Notes */ = {
 			isa = PBXGroup;
 			children = (
-				2BAB7AD22AF3C8A9005EAB63 /* AppDelegate.swift */,
 				2BD194022B0345620080AEBE /* AppDelegate.swift */,
 				2BAB7AD62AF3C8A9005EAB63 /* ViewController.swift */,
-				2BAB7B022AF7FC9A005EAB63 /* InputCell.swift */,
+				2BD194062B034EB10080AEBE /* inputValidation.swift */,
 				2BD194042B034E920080AEBE /* InputCell.swift */,
-				2BD194062B034EB10080AEBE /* inputValidation.swift */,
-				2BD194062B034EB10080AEBE /* inputValidation.swift */,
 				2BAB7ADB2AF3C8AB005EAB63 /* Assets.xcassets */,
 				2BAB7ADD2AF3C8AB005EAB63 /* LaunchScreen.storyboard */,
 				2BAB7AE02AF3C8AB005EAB63 /* Info.plist */,
@@ -91,17 +88,8 @@
 		2BAB7AEA2AF4F14C005EAB63 /* Packages */ = {
 			isa = PBXGroup;
 			children = (
-				2BAB7AEB2AF4F14C005EAB63 /* Carthage */,
 			);
 			name = Packages;
-			sourceTree = "<group>";
-		};
-		2BAB7AF92AF5174B005EAB63 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				2BAB7AF62AF515BF005EAB63 /* SnapKit */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -114,7 +102,7 @@
 				2BAB7ACB2AF3C8A9005EAB63 /* Sources */,
 				2BAB7ACC2AF3C8A9005EAB63 /* Frameworks */,
 				2BAB7ACD2AF3C8A9005EAB63 /* Resources */,
-				2BAB7AF52AF51306005EAB63 /* Embed Frameworks */,
+				2B4A44202B035C420083F2DF /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -122,7 +110,7 @@
 			);
 			name = Notes;
 			packageProductDependencies = (
-				2BAB7AFA2AF5174B005EAB63 /* SnapKit */,
+				2B4A442E2B0366360083F2DF /* SnapKit */,
 			);
 			productName = Notes;
 			productReference = 2BAB7AFF2AF517F7005EAB63 /* Notes.app */;
@@ -166,7 +154,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2BAB7AF72AF515BF005EAB63 /* SnapKit in Resources */,
 				2BAB7ADF2AF3C8AB005EAB63 /* LaunchScreen.storyboard in Resources */,
 				2BAB7ADC2AF3C8AB005EAB63 /* Assets.xcassets in Resources */,
 			);
@@ -181,11 +168,8 @@
 			files = (
 				2BD194072B034EB10080AEBE /* inputValidation.swift in Sources */,
 				2BAB7AD72AF3C8A9005EAB63 /* ViewController.swift in Sources */,
-				2BAB7B032AF7FC9A005EAB63 /* InputCell.swift in Sources */,
-				2BAB7AD32AF3C8A9005EAB63 /* AppDelegate.swift in Sources */,
 				2BD194032B0345620080AEBE /* AppDelegate.swift in Sources */,
 				2BD194052B034E930080AEBE /* InputCell.swift in Sources */,
-				2BAB7B052AF803CD005EAB63 /* inputValidation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,6 +311,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+					"$(PROJECT_DIR)/Notes",
+					"$(PROJECT_DIR)/Notes/Mac",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Notes/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -355,6 +345,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+					"$(PROJECT_DIR)/Notes",
+					"$(PROJECT_DIR)/Notes/Mac",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Notes/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -399,7 +395,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		2BAB7AFA2AF5174B005EAB63 /* SnapKit */ = {
+		2B4A442E2B0366360083F2DF /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = SnapKit;
 		};
