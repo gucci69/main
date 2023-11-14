@@ -9,31 +9,27 @@ import UIKit
 import SnapKit
 
 class InputCell: UITableViewCell {
-    
-    var identifier: String?
-    let textField: UITextField = {
-        let textField = UITextField()
-        textField.borderStyle = .none
-        textField.font = UIFont.systemFont(ofSize: 16)
-        textField.textColor = .black
-        return textField
-    }()
-    
+    var textField: UITextField!
+    var identifier: String!
+
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        self.addSubview(textField)
-        configureTextField()
+
+        self.textField = UITextField(frame: CGRect.zero)
+        self.contentView.addSubview(self.textField)
+
+        self.textField.snp.makeConstraints { make in
+            make.edges.equalToSuperview().inset(UIEdgeInsets(top: 4, left: 8, bottom: 4, right: 8))
+        }
+
+        self.textField.clearButtonMode = .whileEditing
+        self.textField.borderStyle = .roundedRect
+        self.textField.font = UIFont.systemFont(ofSize: 14)
+        
+        self.selectionStyle = .none
     }
-    
-    required init?(coder aDecoder: NSCoder) {
+
+    required init(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    private func configureTextField() {
-        // Задайте здесь необходимые вам констрейнты для текстового поля
-        textField.snp.makeConstraints { make in
-            make.edges.equalTo(self)
-        }
-    }
-    
 }

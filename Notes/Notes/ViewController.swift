@@ -7,7 +7,7 @@
 import UIKit
 import SnapKit
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, InputValidationDelegate {
     
     var textFieldValues: [TextFieldValue] = []
     
@@ -67,8 +67,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
            if let password = UserDefaults.standard.string(forKey: "password") {
                textFieldValues.append(.password(password))
            }
+        InputValidation.shared.delegate = self
         tableView.reloadData()
         
+    }
+    
+    func showError(_ message: String) {
+            let alertController = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: .default))
+            self.present(alertController, animated: true, completion: nil)
     }
 
     private func configureView() {
@@ -88,7 +95,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
         tableView.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
-            make.top.equalTo(segmentedControl.snp.bottom).offset(50)
+            make.top.equalTo(segmentedControl.snp.bottom).offset(40)
             make.width.equalTo(250)
             make.height.equalTo(200)
             
@@ -127,7 +134,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
 
-        @objc func buttonPressed(_ sender: UIButton) {
+    @objc func buttonPressed(_ sender: UIButton) {
             switch selectedOption {
             case .login:
                 
@@ -167,37 +174,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             
             UserDefaults.standard.synchronize()
             tableView.reloadData()
-        }
+    }
         
-    
-    @objc func textFieldDidChange(_ textField: UITextField) {
-            guard let identifier = (textField.superview?.superview as? InputCell)?.identifier else { return }
-            let text = textField.text ?? ""
-        
-        // Сохранение значений полей в массиве
-        switch identifier {
-               case "login":
-                   if let index = textFieldValues.firstIndex(where: { $0.isLogin }) {
-                       textFieldValues[index] = .login(text)
-                   } else {
-                       textFieldValues.append(.login(text))
-                   }
-               case "email":
-                   if let index = textFieldValues.firstIndex(where: { $0.isEmail }) {
-                       textFieldValues[index] = .email(text)
-                   } else {
-                       textFieldValues.append(.email(text))
-                   }
-               case "password":
-                   if let index = textFieldValues.firstIndex(where: { $0.isPassword }) {
-                       textFieldValues[index] = .password(text)
-                   } else {
-                       textFieldValues.append(.password(text))
-                   }
-               default:
-                   break
-               }
-           }
 
     func validateButtonAvailability() {
         if switchView.isOn {
@@ -265,48 +243,46 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         let cell = InputCell(style: .default, reuseIdentifier: nil)
-            
-        cell.identifier = indexPath.row == 0 ? "login" : (indexPath.row == 1 ? "email" : "password")
-                    
-            if let textFieldValue = textFieldValues.first(where: { $0.identifier == cell.identifier }) {
-                cell.textField.text = textFieldValue.text
+        
+        if selectedOption == .login {
+            if indexPath.row == 0 {
+                cell.identifier = "login"
+                cell.textField.placeholder = "Логин"
+            } else if indexPath.row == 1 {
+                cell.identifier = "password"
+                cell.textField.placeholder = "Пароль"
             }
-            
-            if selectedOption == .login {
-                if indexPath.row == 0 {
-                    cell.textField.placeholder = "Логин"
-                } else if indexPath.row == 1 {
-                    cell.textField.placeholder = "Пароль"
-                }
-            } else if selectedOption == .registration {
-                switch indexPath.row {
-                case 0:
-                    cell.textField.placeholder = "Логин"
-                    
-                case 1:
-                    cell.textField.placeholder = "E-mail"
-                    
-                case 2:
-                    cell.textField.placeholder = "Пароль"
-                    
-                case 3:
-                    cell.textField.placeholder = "Повторить пароль"
-                    
-                default:
-                    break
-                }
+        } else if selectedOption == .registration {
+            switch indexPath.row {
+            case 0:
+                cell.identifier = "login"
+                cell.textField.placeholder = "Логин"
+            case 1:
+                cell.identifier = "email"
+                cell.textField.placeholder = "E-mail"
+            case 2:
+                cell.identifier = "password"
+                cell.textField.placeholder = "Пароль"
+            case 3:
+                cell.identifier = "repeatPassword"
+                cell.textField.placeholder = "Повторить пароль"
+            default:
+                break
             }
+        }
+        
+        if let textFieldValue = textFieldValues.first(where: { $0.identifier == cell.identifier }) {
+            cell.textField.text = textFieldValue.text
+        }
+        
+        cell.layer.cornerRadius = 5
+        cell.layer.borderWidth = 3
+        cell.layer.borderColor = UIColor.gray.cgColor
+        cell.contentView.backgroundColor = .white
+        cell.textField.backgroundColor = .white
 
-
-    cell.layer.cornerRadius = 5
-    cell.layer.borderWidth = 3
-    cell.layer.borderColor = UIColor.gray.cgColor
-    cell.contentView.backgroundColor = .white
-    cell.textField.backgroundColor = .white
-
-    return cell
+        return cell
     }
     
     
