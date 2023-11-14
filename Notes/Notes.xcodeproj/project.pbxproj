@@ -15,6 +15,9 @@
 		2BAB7AFB2AF5174B005EAB63 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2BAB7AFA2AF5174B005EAB63 /* SnapKit */; };
 		2BAB7B032AF7FC9A005EAB63 /* InputCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAB7B022AF7FC9A005EAB63 /* InputCell.swift */; };
 		2BAB7B052AF803CD005EAB63 /* inputValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAB7B042AF803CD005EAB63 /* inputValidation.swift */; };
+		2BD194032B0345620080AEBE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD194022B0345620080AEBE /* AppDelegate.swift */; };
+		2BD194052B034E930080AEBE /* InputCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD194042B034E920080AEBE /* InputCell.swift */; };
+		2BD194072B034EB10080AEBE /* inputValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD194062B034EB10080AEBE /* inputValidation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -41,6 +44,9 @@
 		2BAB7AFF2AF517F7005EAB63 /* Notes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Notes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BAB7B022AF7FC9A005EAB63 /* InputCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputCell.swift; sourceTree = "<group>"; };
 		2BAB7B042AF803CD005EAB63 /* inputValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = inputValidation.swift; sourceTree = "<group>"; };
+		2BD194022B0345620080AEBE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2BD194042B034E920080AEBE /* InputCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputCell.swift; sourceTree = "<group>"; };
+		2BD194062B034EB10080AEBE /* inputValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = inputValidation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,9 +75,12 @@
 			isa = PBXGroup;
 			children = (
 				2BAB7AD22AF3C8A9005EAB63 /* AppDelegate.swift */,
+				2BD194022B0345620080AEBE /* AppDelegate.swift */,
 				2BAB7AD62AF3C8A9005EAB63 /* ViewController.swift */,
 				2BAB7B022AF7FC9A005EAB63 /* InputCell.swift */,
-				2BAB7B042AF803CD005EAB63 /* inputValidation.swift */,
+				2BD194042B034E920080AEBE /* InputCell.swift */,
+				2BD194062B034EB10080AEBE /* inputValidation.swift */,
+				2BD194062B034EB10080AEBE /* inputValidation.swift */,
 				2BAB7ADB2AF3C8AB005EAB63 /* Assets.xcassets */,
 				2BAB7ADD2AF3C8AB005EAB63 /* LaunchScreen.storyboard */,
 				2BAB7AE02AF3C8AB005EAB63 /* Info.plist */,
@@ -170,9 +179,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BD194072B034EB10080AEBE /* inputValidation.swift in Sources */,
 				2BAB7AD72AF3C8A9005EAB63 /* ViewController.swift in Sources */,
 				2BAB7B032AF7FC9A005EAB63 /* InputCell.swift in Sources */,
 				2BAB7AD32AF3C8A9005EAB63 /* AppDelegate.swift in Sources */,
+				2BD194032B0345620080AEBE /* AppDelegate.swift in Sources */,
+				2BD194052B034E930080AEBE /* InputCell.swift in Sources */,
 				2BAB7B052AF803CD005EAB63 /* inputValidation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
